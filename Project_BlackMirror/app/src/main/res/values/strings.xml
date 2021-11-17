@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Project_BlackMirror</string>
+    <string name="roomType1">Bathroom</string>
+    <string name="roomType2">Bedroom</string>
+    <string name="roomType3">Kitchen</string>
+    <string name="roomType4">Living Room</string>
+    <string name="roomBuilderSubmit">Create Room</string>
+    <string name="enterRoomName">Enter Room Name</string>
+    <string name="checkRoomButton">Check Rooms</string>
+    <string name="buildRoomsButton">Build Room</string>
+</resources>

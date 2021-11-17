@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RoomBuilderActivity" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false">
+
+        <TextView
+            android:id="@+id/roomBuildTitle"
+            android:layout_width="270dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Build your rooms"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/createRoomName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.53" />
+
+        <EditText
+            android:id="@+id/createRoomName"
+            android:layout_width="268dp"
+            android:layout_height="77dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/enterRoomName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.32" />
+
+        <Button
+            android:id="@+id/enterInputButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:onClick="handleText"
+            android:text="@string/roomBuilderSubmit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.221"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/roomTypeButtons" />
+
+        <TextView
+            android:id="@+id/chooseRoomType"
+            android:layout_width="223dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="-105dp"
+            android:layout_marginTop="25dp"
+            android:clickable="false"
+            android:duplicateParentState="false"
+            android:editable="false"
+            android:ems="10"
+            android:inputType="none"
+            android:text="Choose a Room Type:"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/roomTypeButtons"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.601"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createRoomName"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <RadioGroup
+            android:id="@+id/roomTypeButtons"
+            android:layout_width="247dp"
+            android:layout_height="193dp"
+            android:layout_marginTop="220dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.43"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/bathroomType"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/roomType1"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/bedroomType"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/roomType2"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/kitchenType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/roomType3"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/livingroomType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/roomType4"
+                android:textSize="12sp" />
+
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
